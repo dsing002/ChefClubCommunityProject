@@ -1,0 +1,99 @@
+<doctype html>
+<html>
+
+<!-- inline css styling as it was easier to see what needed to be edited -->
+ 
+<style>                                                                                                                                                                                                                                                                                           
+  body{
+
+  background-image: linear-gradient(to bottom right, green, blue);                                                                                                                                                                                                                   
+}
+
+ h1{                                                                                                                                                                                                                                                    
+ color: white;                                                                                                                                                                                                                                                                   
+ text-align: center;                                                                                                                                                                                                                                                                               
+ font-size:40px;                                                                                                                                                                                                                                                                                         
+}        
+
+                                                                                                                                                                                                                                                                                                     
+ p{                                                                                                                                                                                                                                                          
+  color: white;                                                                                                                                                                                                                                                                 
+  text-align: center;                                                                                                                                                                                                                                                                                  
+  font: italic bold 12px/30px Georgia, serif;                                                                                                                                                                                                                                                         
+  font-size: 20px;                                                                                                                                                                                                                                                                             
+}                                                                                                                                                                                                                                                               
+
+ a{                                                                                                                                                                                                                                         
+ font: bold 12/30px Georgia, serif;                                                                                                                                                                                                                                                            
+}                                                                                                                                                                                                                                                                                                                                                      
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+                                                                                                                                                     
+}
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+                                                                                                                                                     
+.button{
+    margin-top:100px;
+}
+                                                                                                                                                     
+ .content{
+    margin-top:100px;
+}
+
+
+table{
+  margin-bottom: 40px;
+  color: white;
+  margin-right: 100px;
+  margin-left: 100px;
+}                                                                                                                                                    
+</style>
+
+<!-- body where content is displayed including the table of results -->
+
+<body>
+<div class="content">
+ <h1>Search results</h1>
+
+<table border="1" align="center">
+                                                                                                                                                     
+<% availablefoodname.forEach(function(foodname){ %>
+ <tr>
+     <td><%=foodname.author %></td>
+     <td><%=foodname.recipename %></td>
+     <td><%=foodname.ingredients %></td>
+     <td><%=foodname.instructions %></td>
+</tr>
+<% }) %>
+</table>
+</div>
+</body>
+
+<!-- navigation found at the bottom of the page-->
+
+<div class="button" style="text-align:center">
+ <a href='/index'>Home</a>
+ <a href='/register'>Register</a>
+ <a href='/login'>Login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/list'>List</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+</html>
+

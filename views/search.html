@@ -1,0 +1,94 @@
+<!doctype html> 
+  <html>
+    <head>
+      <title>This is the search page for recipes</title>
+    </head>
+
+<!-- inline css styling as it was easier to see what needed to be edited -->
+
+<style>
+  body{
+  background-image: linear-gradient(to bottom right, green, blue);
+}
+ h1{
+ color: white;
+ text-align: center;
+ font-size:40px;
+}
+ p{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+ a{
+ font: bold 12/30px Georgia, serif;
+}
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+}
+
+.button a{
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+}
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+                                                                                                                                                     
+.button{
+    margin-top:100px;
+}
+                                                                                                                                                     
+ .content{
+    margin-top:100px;
+}
+</style>
+
+<!-- body where the content is displayed including the search form and text -->
+
+<body>
+<div class="content">
+    <h1>You can use this page to search for recipes!</h1>
+
+        <p>Try it out (try adding a recipe then searching for it)</p>
+
+<div align="center">
+ <form action="/search-result" method="POST">
+ <input id="search" type="text" name="keyword" value="Default">
+ <input type="submit" value="OK" >
+ </form>
+</div>
+</div>
+</body>
+
+<!-- navigation found at the bottom of the page -->
+
+<div class="button" style="text-align:center">
+ <a href='/index'>Home</a>
+ <a href='/register'>Register</a>
+ <a href='/login'>Login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/list'>List</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+
+</html>

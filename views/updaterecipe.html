@@ -1,0 +1,170 @@
+<doctype html>
+<html>
+<style>
+
+/* <!-- inline css styling as it was easier to see what needed to be edited --> */
+
+  body{
+  background-image: url('recipeimg.jpg');
+  background-size: 1400px 900px;
+  background-repeat: no-repeat;
+}
+
+ h1{
+ color: white;
+ text-align: center;
+ font-size:40px;
+}
+
+h2{
+ color:white
+}
+
+p{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+
+ a{
+ font: bold 12/30px Georgia, serif;
+}
+
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+
+.button{
+  margin-bottom:20px;
+}
+
+table{
+ margin-left: 50px;
+ margin-right: 50px;
+ background-color: black;
+ padding: 10px;
+}
+
+tr{
+  color: white;
+}
+
+th{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+
+form{
+  margin-right: 40px;
+  margin-left:40px;
+  background-color: black;
+  padding: 10px;
+}
+
+table{
+  margin-bottom: 40px;
+}
+</style>
+   
+   <!-- body where content is displayed including the forms, table and text -->
+   
+ <h1> Update our recipes </h1>
+          <body>
+           <p>Welcome to the update recipe page, here you can choose to update either of the four categories from the add recipe page! *NOTE* you must ensure the original information you want to enter is in the exact same format as found on the list below, we suggest copying the information then pasting it to ensure it is updated, enjoy :)</p>                                                                                                                                                                                                                                                                                                                                                                           
+
+<div style="display: flex;" align="center">                                                                                                                                                     
+  <form method="POST" action="/updatedauthor">
+
+      <h2>Original Author Name:</h2>
+     <input id="authorID" type="text" name="authorID" value="original author name" />
+   
+   <h2>New Author Name:</h2>
+      <input id="author" type="text" name="author" value="changing authors name to" />
+     <input type="submit" value="OK" />
+</form>
+
+
+<form method="POST" action="/updatedrecipename">
+                                                                                                                                                     
+      <h2>Original Recipe Name:</h2>
+     <input id="recipeID" type="text" name="recipeID" value="original recipe name" />
+                                                                                                                                                     
+   <h2>New Recipe Name:</h2>
+      <input id="recipe" type="text" name="recipe" value="changing recipe name to" />
+     <input type="submit" value="OK" />
+</form>
+
+
+<form method="POST" action="/updatedingredients">
+                                                                                                                                                     
+      <h2>Original Ingredients list:</h2>
+     <input id="ingredientID" type="text" name="ingredientID" value="original ingredient list" />
+                                                                                                                                                     
+   <h2>New Ingredients list:</h2>
+      <input id="ingredient" type="text" name="ingredient" value="changing ingredient list to" />
+     <input type="submit" value="OK" />
+</form>
+
+
+<form method="POST" action="/updatedinstructions">
+                                                                                                                                                     
+      <h2>Original Instructions:</h2>
+     <input id="instructionID" type="text" name="instructionID" value="original instructions" />
+                                                                                                                                                     
+   <h2>New Instructions:</h2>
+      <input id="instruction" type="text" name="instruction" value="changing instructions to" />
+     <input type="submit" value="OK" />
+</form>
+</div>
+
+ <p>You can use the list below to see what needs to be changed and copy and paste it directly from the same page without having to go back and forth!</p>
+
+<table border="1" align="center">
+<tr>
+   <th>Author</th>
+    <th>Recipe name</th>
+    <th>Ingredients</th>
+    <th>Instructions</th>
+</tr>                                                                                                                                                
+<% availablefoodname.forEach(function(foodname){ %>
+ <tr>
+     <td><%=foodname.author %></td>
+     <td><%=foodname.recipename %></td>
+     <td><%=foodname.ingredients %></td>
+     <td><%=foodname.instructions %></td>
+</tr>
+<% }) %>
+</table>
+
+<!-- navigation foind at the bottom of the page -->
+
+<div class="button" style="text-align:center">
+ <a href='/index'>Home</a>
+ <a href='/register'>Register</a>
+ <a href='/login'>Login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/list'>List</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+</body
+</html>

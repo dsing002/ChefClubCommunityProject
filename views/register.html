@@ -1,0 +1,104 @@
+<!doctype html>
+ <html>
+ <head>
+ <title><strong>This is the Register Page</strong></title>
+ </head>
+ 
+ <!-- inline css styling as it was easier to see what needed to be edited -->
+
+<style>
+  body{
+  background-image: url('registerimg.jpg');
+  background-repeat: no-repeat;
+  background-size: 1400px 750px;
+}                                                                                           
+ h1{
+ color: white;
+ text-align: center;
+ font-size:40px;
+}                                                                                           
+
+ p{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+                                                                                           
+ a{
+ font: bold 12/30px Georgia, serif;
+}
+                                                                                            
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+}                               
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+
+.content{
+    height: 550px;
+    width:900px;
+    margin-top: 90px;
+    margin-left:250px;
+    margin-left:250px;
+    margin-bottom:90px;
+    background: black;
+}
+                          
+form{
+    margin-bottom:45px;
+}
+                              
+</style>
+
+<!-- body where the content is displayed including the register form -->
+
+<div class="content">
+<body>
+
+
+ <h1>Register to use our website in order to access some of our pages such as adding recipes!</h1>
+ <p>Register to become a member and join the chef club community!!!</p>
+<div align="center">
+<form method="POST" action="/registered">
+
+ <strong><p>Username</p>
+ <input id="name" type="text" name="username" value="name" />
+
+ <p>Password:</p>
+ <input id="password" type="password" name="password" value="password" />
+ 
+ <p>Email:</p>
+ <input id="email" type="email" name="email" value="email" /> 
+
+ <input type="submit" value="OK" />
+</form>
+</div>
+</body>
+
+<!-- navigation found at the bottom of the page -->
+
+<div class="button" style="text-align:center">
+ <a href='/index'>Home</a>
+ <a href='/login'>Login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/list'>List</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+</div>
+</html>

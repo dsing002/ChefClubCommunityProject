@@ -1,0 +1,82 @@
+
+<!-- inline css styling as it was easier to see what needed to be edited -->
+
+<style> 
+body{
+
+  background-image: linear-gradient(to bottom right, green, blue);                                                                                                                                                                                                                                                                                                                                                                              
+}
+
+ h1{                                                                                                                                                                                                                                                    
+ color: white;                                                                                                                                                                                                                                                                   
+ text-align: center;                                                                                                                                                                                                                                                                               
+ font-size:40px;                                                                                                                                                                                                                                                                                  
+}                                                                                                                                                                                           
+
+ p{                                                                                                                                                                                                                                                          
+  color: white;                                                                                                                                                                                                                                                                 
+  text-align: center;                                                                                                                                                                                                                                                                              
+  font: italic bold 12px/30px Georgia, serif;                                                                                                                                                                                                                                    
+  font-size: 20px;                                                                                                                                                                                                                                                                             
+}                                                                                                                                                                                                                                                               
+
+ a{                                                                                                                                                                                                                                         
+ font: bold 12/30px Georgia, serif;                                                                                                                                                                              
+}                                                                                                                                                                                                                                                                                                                                                      
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+                                                                                                                                                     
+}
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+                                                                                                                                                     
+.button{
+    margin-top:100px;
+}
+                                                                                                                                                     
+ .content{
+    margin-top:100px;
+}
+
+</style>
+
+<!-- main area where the ocntent of the login form is displayed -->
+
+<div class="content">
+<div align="center">                                                                                                                                                                                                                                                                                      
+<form method="POST" action="/loggedin">                                                                                                                                                                                                                                                    
+   <h1> Login page <h1/>
+     <input id="name" type="text" name="username" value="Name" />  
+     <br/>
+      <input id="password" type="password" name="password" value="Password" />
+       <br/>
+        <br/>
+<input type="submit" value="Submit" />                             
+</form>
+</div>
+</div>
+
+<!-- navigation is found at the bottom of the page-->
+
+<div class="button" style="text-align: center">                                                                                        
+<a href='./index'>Home</a>   
+ <a href='/register'>Register</a>                                                                                                                   
+ <a href='/addrecipe'>Add recipe</a>  
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>                                                                                                     
+ <a href='/list'>List</a>                                                                                                               
+ <a href='/search'>Search</a>                                                                                                                       
+ <a href='/api'>API</a>                                                                                                                             
+ <a href='/logout'>Logout</a>                                                                                                                        
+</div>

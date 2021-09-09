@@ -1,0 +1,90 @@
+<!doctype html>
+ <html>
+  <head>
+    <title>Welcome to Darshan's recipe webpage!</title>
+  </head>
+
+<!-- inline css styling as it was easier to see what needed to be edited -->
+
+  <style>
+  body{
+  background-image: url('homepageveg.jpg');
+  background-repeat: no-repeat;
+  background-size: 1400px 700px;
+}     
+   
+ h1{
+ color: snow;
+ text-align: center;
+ font-size:40px;
+ filter: brightness(900%);
+}         
+
+ p{ 
+  color: snow;
+  text-align: center;
+  font: italic bold 16px/34px Georgia, serif;
+  font-size: 20px;
+  filter: brightness(900%);
+}
+
+ a{
+ font: bold 16/30px Georgia, serif;
+}   
+
+
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+    
+}
+
+a:hover:not(.button) {
+
+  background-color: black;
+  color: white;
+
+}
+
+.button{
+    margin-top:100px;
+}
+
+ .content{
+    margin-top:100px;
+}
+
+</style>
+
+<!-- the content of the page including text and headings -->
+
+ <body>
+<div class="content">
+<h1 style="text-decoration: underline">Chef Club Community</h1>
+ <h1> Welcome to the new recipe collection webpage! </h1>
+ 
+    <p>Stay safe from coronavirus!</p>
+      <p> <strong>Welcome to the launch of our new recipe website </strong>, this new site has been created to let new users from all over the world share their recipes with one another. <strong></p> 
+         <p>Thank you for dropping by our site and giving it a chance</strong> feel free to look around, but be sure to register first so you can access some of our pages that are restricted to registered users only!</p>
+</div>   
+ </body>
+ 
+ <!-- navigations found at the bottom -->
+ 
+<div class="button" style="text-align:center">
+ <a href='/register'>Register</a>
+ <a href='/login'>Login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/list'>List</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+</html>

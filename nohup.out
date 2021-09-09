@@ -1,0 +1,45 @@
+This server is up and running on port 8000!
+Connected to database
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/dsing002/lab3/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/home/dsing002/lab3/node_modules/mysql/lib/Connection.js:97:28)
+    at Socket.<anonymous> (/home/dsing002/lab3/node_modules/mysql/lib/Connection.js:525:10)
+    at emitNone (events.js:72:20)
+    at Socket.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:905:12)
+    at nextTickCallbackWith2Args (node.js:441:9)
+    at process._tickCallback (node.js:355:17)
+This server is up and running on port 8000!
+Connected to database
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/dsing002/lab3/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/home/dsing002/lab3/node_modules/mysql/lib/Connection.js:97:28)
+    at Socket.<anonymous> (/home/dsing002/lab3/node_modules/mysql/lib/Connection.js:525:10)
+    at emitNone (events.js:72:20)
+    at Socket.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:905:12)
+    at nextTickCallbackWith2Args (node.js:441:9)
+    at process._tickCallback (node.js:355:17)
+This server is up and running on port 8000!
+Connected to database
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/home/dsing002/lab3/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/home/dsing002/lab3/node_modules/mysql/lib/Connection.js:97:28)
+    at Socket.<anonymous> (/home/dsing002/lab3/node_modules/mysql/lib/Connection.js:525:10)
+    at emitNone (events.js:72:20)
+    at Socket.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:905:12)
+    at nextTickCallbackWith2Args (node.js:441:9)
+    at process._tickCallback (node.js:355:17)

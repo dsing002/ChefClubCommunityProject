@@ -1,0 +1,110 @@
+<!doctype html>
+ <html>
+    <head>
+       <title><strong>This is the Add recipe page!</strong></title>
+    </head>
+     
+<!-- this is the inline style css as it was easier to visually see what i needed to edit -->
+                                                                                                                                                                                                                             
+<style>
+ 
+  body{
+  background-image: url('recipeimg.jpg');
+  background-size: 1400px 790px;
+  background-repeat: no-repeat;
+}
+
+ h1{
+ color: white;
+ text-align: center;
+ font-size:40px;
+}
+
+ p{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+ a{
+ font: bold 12/30px Georgia, serif;
+}
+                                                                                                                                                                                                                             
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+                                                                                                                                                     
+}
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+                                                                                                                                                     
+.button{
+    margin-bottom:40px;
+}
+                                                                                                                                                     
+ .content{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+form{
+  margin-bottom: 20px;
+  margin-left:200px;
+  margin-right:200px;
+  background-color: black;
+  padding: 10px;
+}
+
+</style>    
+
+<!-- form for adding the recipes into the database -->
+
+<body>
+<div class="content">
+ <h1>New recipes can be added here:</h1>
+
+<div align="center">
+  <form method="POST" action="/recipeadded">
+  
+   <p>Author:</p>
+     <input id="author" type="text" name="author" value="author" />                                                                                                                                                                                                                                            <strong><p>Recipe Name:</p>
+    <input id="recipename" type="text" name="recipename" value="recipe name" />
+
+     <p>Ingredients:</p>
+     <input id="ingredients" type="text" name="ingredients" value="ingredients" />
+
+      <p>Instructions:</p>
+     <input id="instructions" type="text" name="instructions" value="instructions" />
+
+ <input type="submit" value="OK" />
+</form>
+</div>
+</div>
+</body>
+
+<!-- navigation at the bottom of the page  -->
+
+<div class="button" style="text-align: center">
+ <a href='/index'>Home</a>
+ <a href='/register'>Register</a>
+ <a href='/login'>Login</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/list'>List</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+                                                                                                                                                                                                                             
+</html>
+     

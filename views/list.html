@@ -1,0 +1,113 @@
+<doctype html>
+<html>
+
+<!-- inline css styling as it was easier to see what needed to be edited -->
+
+<style>                                                                                                                                              
+  body{                                                                                                                                              
+  background-image: url('listveg.jpg');                                                                                   
+  background-size: 1400px 750px;
+  background-repeat: no-repeat;
+}                                                                                                                                                    
+ h1{
+ color: white;                                                                                                                                       
+ text-align: center;                                                                                                                                 
+ font-size:40px;                                                                                                                                     
+}                                                                                                                                                    
+                                                                                                                                                     
+ p{                                                                                                                                                  
+  color: white;                                                                                                                                      
+  text-align: center;                                                                                                                                
+  font: italic bold 12px/30px Georgia, serif;                                                                                                        
+  font-size: 20px;                                                                                                                                   
+}
+                                                                                                                                                    
+ a{                                                                                                                                                  
+ font: bold 12/30px Georgia, serif;                                                                                                                  
+}
+
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;                                                                                                                                         
+}
+                                                                                                                                                     
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+                                                                                                                                                     
+ .content{
+    height: 550px;
+    width:900px;
+    margin-top: 90px;
+    margin-left:250px;
+    margin-left:250px;
+    margin-bottom:90px;
+    background: black;
+}
+
+tr{
+  color: white;
+}                                                                                                                                                     
+th{
+  color: white;                                                                                                                                      
+  text-align: center;                                                                                                                                
+  font: italic bold 12px/30px Georgia, serif;                                                                                                        
+  font-size: 20px;
+}
+
+table{
+  margin-left: 20px;
+  margin-right:20px;
+  margin-bottom:55px;
+}
+                                                                                                                                       
+</style>
+
+<!-- content showing the tbale listing all available records -->
+
+<body>
+<div class="content">
+    <h1> This is the List Page </h1>
+ 
+            <p>You can see all of the recipes we have stored in a clear and easy to understand format:</p>
+ 
+<table border="1" align="center">
+<tr>                                                                                                                                                    <th>Author</th>                                                                                                                                       <th>Recipe name</th>                                                                                                                                 <th>Ingredients</th>
+    <th>Instructions</th>
+</tr>
+
+<% availablefoodname.forEach(function(foodname){ %>  
+ <tr>
+     <td><%=foodname.author %></td>  
+     <td><%=foodname.recipename %></td>     
+     <td><%=foodname.ingredients %></td>
+     <td><%=foodname.instructions %></td>  
+</tr>
+<% }) %> 
+</table> 
+</body>
+
+ <!-- navigations found at the bottom of the page -->
+
+<div class="button" style="text-align:center">
+ <a href='/index'>Home</a>
+ <a href='/register'>register</a>
+ <a href='/login'>login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/deleterecipe'>Delete recipe</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+
+</html>

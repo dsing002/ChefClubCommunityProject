@@ -1,0 +1,128 @@
+<doctype html>
+<html>
+
+<!-- inline css styling as it was easier to see what i needed to edit -->
+
+<style>
+
+  body{
+  background-image: url('recipeimg.jpg');
+  background-size: 1400px 810px;
+  background-repeat: no-repeat;
+}
+
+ h1{
+ color: white;
+ text-align: center;
+ font-size:40px;
+}
+
+p{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+
+ a{
+ font: bold 12/30px Georgia, serif;
+}
+
+.button a{
+    color: white;
+    border-radius: 0px;
+    height: 30px;
+    width: 110px;
+    padding: 7px;
+    background-color: red;
+    text-decoration: none;
+                                                                                                                                                     
+}
+
+a:hover:not(.button) {
+                                                                                                                                                     
+  background-color: black;
+  color: white;
+                                                                                                                                                     
+}
+                                                                                                                                                     
+.button{
+    margin-top:50px;
+}
+                                                                                                                                                     
+ .content{
+    margin-top:100px;
+    margin-bottom:100px;
+}
+
+tr{
+  color: white
+}
+
+th{
+  color: white;
+  text-align: center;
+  font: italic bold 12px/30px Georgia, serif;
+  font-size: 20px;
+}
+
+table{
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: black;
+  padding: 10px;
+}
+</style>
+   
+<body>
+    
+<!-- Form for delteing a recipe using recipename and the table to list all the exisitng records -->
+    
+<div class="content">
+
+ <h1> Delete a recipe </h1>
+       
+           <p>Hey welcome to the delete recipe page, here you can enter a recipe you want to delete by entering its name, you can find the name of the recipe below!</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+ <div align="center">
+  <form method="POST" action="/deleted">
+                                                                                                                                                     
+     <strong><p>Recipe Name:</p>
+    <input id="recipename" type="text" name="recipename" value="recipe name" />
+                                                                                                                                                     
+ <input type="submit" value="OK" />
+</form>
+</body>
+
+<table border="1" align="center">
+<tr>
+   <th>Author</th>
+    <th>Recipe name</th>
+    <th>Ingredients</th>
+    <th>Instructions</th>
+</tr>                                                                                                                                                
+<% availablefoodname.forEach(function(foodname){ %>
+ <tr>
+     <td><%=foodname.author %></td>
+     <td><%=foodname.recipename %></td>
+     <td><%=foodname.ingredients %></td>
+     <td><%=foodname.instructions %></td>
+</tr>
+<% }) %>
+</table>
+</div>
+
+<!-- navigation found at the bottom of the page -->
+
+<div class="button" style="text-align:center">
+ <a href='/index'>Home</a> 
+<a href='/register'>Register</a>
+ <a href='/login'>Login</a>
+ <a href='/addrecipe'>Add recipe</a>
+ <a href='/updaterecipe'>Update recipe</a>
+ <a href='/list'>List</a>
+ <a href='/search'>Search</a>
+ <a href='/api'>API</a>
+ <a href='/logout'>Logout</a>
+</div>
+
+</html
