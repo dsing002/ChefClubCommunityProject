@@ -1,7 +1,7 @@
                                                          !!!CHEF CLUB COMMUNITY!!!
 
 Welcome to my recipe web application 'myapp' or as i have named it chef club community, i have been working on creating a fully functional web application that
-has successfully implement nearly all of the requirements with only one being partially met, that being the search page, where it is connected to the database but
+has successfully implemented nearly all of the requirements with only one being partially met, that being the search page, where it is connected to the database but
 is unable to only display just the keyword result, it displays everything in the database instead. However, over the course of creating this application i have 
 learnt many new techniques and inventive ways to both create a functional web application but also a aestheically pleasing one. Below is the checklist and what i
 have completed, as well as where each requirement can be found. and velow that will be further explanation of my database design as well as my ER diagram which 
